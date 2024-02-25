@@ -1,0 +1,1087 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Great+Vibes&family=Indie+Flower&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Burned&display=swap');
+
+:root{
+    --yellow-1 : #c59d5f;
+    --light : #f9f9f9;
+    --dark : #222;
+    --gray-1 : #a5a5a5;
+    --fredericka_the_Great : "Fredericka the Great", serif;
+    --great_vibes : "Great Vibes", cursive;
+    --raleway : "Raleway", sans-serif;
+    --indie_flower :"Indie Flower", cursive;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--raleway) ;
+    text-decoration: none;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+    
+}
+
+::-webkit-scrollbar-track{
+    background-color: #f1f1f1;
+
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--yellow-1);
+    border-radius: 5px;
+    
+}
+
+*::selection{
+    background-color: var(--yellow-1);
+    color: white;
+}
+
+
+.line_height{
+    margin-top: 40px;
+    height: 100px;
+    width: 2px;
+    background-color: white;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--fredericka_the_Great);
+}
+
+span{
+    font-family: var(--great_vibes);
+    color:var(--yellow-1);
+}
+
+.slide_overlay::before{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: rgba(27,27, 27, 0.3);
+    z-index: 1;
+}
+
+section{
+    padding: 100px 0 0;
+    text-align: center;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.sec-header{
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.sec_header span{
+    font-size: 35px;
+}
+
+.sec_header h2{
+    color: var(--dark);
+    font-size: 45px;
+}
+
+.boxs{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.boxs .box{
+    flex-basis: 31.5%;
+}
+
+.header_background{
+    position: relative;
+    padding: 180px 0;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+/* --------------------------- Reservation Form ---------------------- */
+
+.reservation_div{
+    position: fixed;
+    top: -150%;
+    left: 0;
+    z-index: 800;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(39,39, 39, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.reservation_div.active{
+    top: 0;
+}
+.reservation_div .reservation_form{
+    width: 65vw;
+    background-color: white;
+    border-radius: 5px;
+    padding: 25px 100px;
+    text-align: center;
+    position: relative;
+}
+.reservation_div .reservation_form .text h3{
+    text-align: center;
+    color: var(--yellow-1);
+    font-size: 30px;
+    margin-bottom: 50px;
+
+}
+
+.reservation_div form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.reservation_div form input {
+    width: 40%;
+    padding: 15px 18px;
+    outline: none;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #cccbcb;
+    box-shadow: 0 3px 6px rgba(0, 0,0, 0.16),
+     0 3px 6px rgba(0, 0,0, 0.22);
+}
+
+.reservation_div form textarea{
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #a5a5a5;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    line-height: 2;
+    outline: none;
+    box-shadow: 0 3px 6px rgba(0, 0,0, 0.16),
+     0 3px 6px rgba(0, 0,0, 0.22);
+    
+}
+
+.reservation_div .btn{
+    background-color: var(--yellow-1);
+    padding: 10px 20px;
+    font-weight: bolder;
+    /* width: 100px; */
+    text-transform: capitalize;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: var(--indie_flower);
+    letter-spacing: 3px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s;
+
+}
+.reservation_div .btn:hover{
+    box-shadow: 0 3px 6px rgba(0, 0,0, 0.16),
+     0 3px 6px rgba(0, 0,0, 0.22);
+     transform: scale(1.02);
+}
+
+#close_resrv{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--yellow-1);
+    line-height: 30px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#close_resrv:hover{
+    box-shadow: 0 3px 6px rgba(0, 0,0, 0.16),
+     0 3px 6px rgba(0, 0,0, 0.22);
+     transform: scale(1.1);
+}
+
+/* _____________________________________________________ */
+
+.header{
+    width: 100%;
+    background-color:transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    border-bottom: 1px solid rgba(255,255, 255, 0.4);
+}
+
+.header nav{
+    width: 85%;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header nav .logo{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: var(--great_vibes);
+    letter-spacing: 2px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-shadow: 0px 5px 1px var(--yellow-1);
+    
+}
+
+.header nav .menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header nav ul li{
+    display: inline-block;
+    margin: 0 30px;
+    height: 100px;
+    position: relative;
+    line-height: 100px;
+}
+
+.header nav ul li a{
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+
+}
+
+.header nav ul li::after{
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    background-color: var(--yellow-1);
+    width: 0%;
+    height: 2px;
+    transition: 0.5s;
+}
+
+.header nav ul li:hover::after,
+.header nav ul li:first-child::after{
+    width: 100%;
+}
+
+.main_btn{
+    font-size: 14px;
+    color: white;
+    background-color: var(--yellow-1);
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+.main_btn:hover{
+    color: var(--yellow-1);
+    background-color: white;
+}
+#openMenu,#resrv{
+    position: absolute;
+    top: 50%;
+    color: var(--light);
+    border: 2px solid var(--light);
+    background-color: var(--yellow-1);
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    display: none;
+}
+#openMenu{
+    right: 30px;
+}
+#resrv{
+    right: 70px;
+}
+
+/* Activation background header will be white when i scrol down */
+
+.header.activation{
+    background-color: var(--light);
+    box-shadow: 0 3px 6px rgba(0, 0,0, 0.16),
+     0 3px 6px rgba(0, 0,0, 0.22);
+}
+.header.activation nav ul li a{
+    color: var(--dark);
+
+}
+
+.header.activation nav .resrvationBtn{
+    color: var(--dark);
+    border: 1px solid var(--yellow-1);
+}
+
+.header.activation nav .resrvationBtn:hover{
+    color: var(--yellow-1);
+}
+.header.activation nav .logo{
+    color:  var(--dark);
+}
+
+
+/* ____________________________  Home  ___________________________ */
+
+.home .home_slider .slide{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .home_slider .slide1{
+    background-image: url(../images/home-1.jpg);
+}
+.home .home_slider .slide2{
+    background-image: url(../images/home-2.jpg);
+}
+.home .home_slider .slide3{
+    background-image: url(../images/home-3.jpg);
+}
+
+
+
+.home .home_slider .slide .content{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    z-index: 10;
+}
+
+.home .home_slider .slide .content h3{
+    color: white;
+    font-size: 35px;
+
+}
+
+.home .home_slider .slide .content h1{
+    color: white;
+    font-size: 80px;
+    padding: 0 0 60px;
+
+}
+
+.home .home_slider .slide .content p{
+    color: white;
+    font-size: 18px;
+
+}
+
+.home .home_slider .slide .content .main_btn{
+    padding: 15px 25px;
+    text-transform: uppercase;
+    
+
+}
+
+
+/* -------------------------- about ------------------------- */
+
+.about .content .div_p{
+    margin: auto;
+    padding: 80px 10px;
+
+}
+
+.about .content .div_p p{
+    color: #222;
+    font-size: 40px;
+    
+}
+
+.about .content .boxs .box{
+   box-shadow: 0 14px 28px rgba(0, 0,0, 0.25),
+    0 10px 10px rgba(0, 0,0, 0.22);
+    transition: 0.5s;
+
+}
+
+.about .content .boxs .box:hover{
+    box-shadow: 0 3px 6px rgba(0, 0,0, 0.16),
+    0 3px 6px rgba(0, 0,0, 0.22);
+}
+
+.about .content .boxs .box span{
+    font-size: 35px;
+    margin-bottom: 15px;
+
+}
+
+.about .content .boxs .box h3{
+    color: var(--dark);
+    font-size: 30px;
+    margin-bottom: 25px;
+
+}
+
+.about .content .boxs .box p{
+    font-size: 14px;
+    color: rgb(134, 134, 134);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* ************************* recipes ********************** */
+
+.recipes .header_background{
+    background: url(../images/hero-bg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 25px 0 25px 0;
+    margin-bottom: 180px;
+    
+}
+
+.recipes .header_background .hero_img{
+    margin-top: 25px;
+    transition: all 0.5s;
+    
+}
+
+.recipes .header_background .hero_img img{
+    animation: rotate 20s linear infinite;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.recipes .header_background .recipes_head span{
+    color: #3d4454;
+    font-size: 45px;
+    letter-spacing: 5px;
+}
+
+.recipes .boxs .box img{
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.recipes .boxs .box span{
+    margin: 0 15px;
+    font-size: 30px;
+    
+}
+
+.recipes .boxs .box h4{
+    font-size: 20px;
+    color: var(--dark);
+    padding: 0 0 20px;
+}
+
+.recipes .boxs .box p{
+    color: rgb(134, 134, 134);
+
+}
+
+.recipes .boxs .box{
+    box-shadow: 0 14px 28px rgba(0, 0,0, 0.25),
+     0 10px 10px rgba(0, 0,0, 0.22);
+     transition: 0.5s;
+     border-radius: 10px;
+     padding: 20px;
+ 
+ }
+ 
+ .recipes .boxs .box:hover{
+     box-shadow: 0 3px 6px rgba(0, 0,0, 0.16),
+     0 3px 6px rgba(0, 0,0, 0.22);
+ }
+
+
+
+
+/* **************************** Menu **************************************** */
+
+.sec_menu .header_background{
+    background: url(../images/sec-bg2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.sec_menu .header_background .sec_header span{
+    font-size: 45px;
+    letter-spacing: 5px;
+}
+
+.sec_menu .header_background .sec_header h2{
+    color: white;
+}
+
+.sec_menu .content ul{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.sec_menu .content ul li{
+    color: var(--dark);
+    font-size: 22px;
+    font-family: var(--indie_flower);
+    list-style: none;
+    cursor: pointer;
+    margin: 0 40px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+.sec_menu .content ul li:hover, .sec_menu .content ul li.active{
+    color: var(--yellow-1);
+}
+.sec_menu .boxs{
+    margin-bottom: 50px;
+}
+
+.sec_menu .boxs .box{
+    border-radius: 10px;
+    margin-bottom: 50px;
+    box-shadow: 0 14px 28px rgba(0, 0,0, 0.25),
+     0 10px 10px rgba(0, 0,0, 0.22);
+    transition: 0.5s;
+    padding-bottom: 20px;
+}
+
+.sec_menu .boxs .box:hover{
+    box-shadow: 0 3px 6px rgba(0, 0,0, 0.16),
+    0 3px 6px rgba(0, 0,0, 0.22);
+}
+
+
+.sec_menu .boxs .box img{
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+
+.sec_menu .boxs .box .price_name{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sec_menu .boxs .box .price_name h3{
+    font-size: 16px;
+}
+
+.sec_menu .boxs .box .price_name span{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.sec_menu .boxs .box p{
+    /* text-align: left; */
+    font-size: 14px;
+    color: rgb(134, 134, 134);
+}
+.sec_menu .menu_btn{
+    font-size: 14px;
+    color: white;
+    background-color: var(--dark);
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    
+}
+.sec_menu .menu_btn:hover{
+    box-shadow: 0 3px 6px rgba(0, 0,0, 0.16),
+    0 3px 6px rgba(0, 0,0, 0.22);
+}
+
+/* ******************************  Team  ********************************* */
+.sec_team {
+    padding-bottom:50px ;
+}
+.sec_team .header_background{
+    background: url(../images/sec-bg3.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.sec_team .header_background .sec_header span{
+    font-size: 45px;
+    letter-spacing: 5px;
+}
+
+.sec_team .header_background .sec_header h2{
+    color: white;
+}
+
+.sec_team .boxs .box{
+    flex-basis: 22%;
+    background-color: white;
+    box-shadow: 0 0 18px rgba(40, 40, 40,0.2);
+    border-radius: 10px;
+}
+
+.sec_team .boxs .box img{
+    width: 100%;
+    position: relative;
+    transition: 0.5s;
+}
+
+.sec_team .boxs .box .team_content:hover img{
+    transform: scale(1.1);
+}
+.sec_team .boxs .box .chef_details p{
+    font-size: 13px;
+    color: white;
+}
+.sec_team .boxs .box .chef_title{
+    padding: 30px 0;
+}
+.sec_team .boxs .box .chef_title h4{
+    margin-bottom: 10px;
+}
+.sec_team .boxs .box .chef_title p{
+    font-size: 16px;
+    color: rgb(134, 134, 134);
+}
+
+.sec_team .boxs .box .team_content{
+    position: relative;
+    overflow: hidden;
+}
+
+.sec_team .boxs .box .team_content .chef_details{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #222222cb;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 15px;
+    opacity: 0;
+    transition: 0.5s;
+    
+}
+
+.sec_team .boxs .box .team_content:hover .chef_details{
+    opacity: 1;
+}
+
+.sec_team .boxs .box .team_content .chef_details .cont-text{
+    width: 85%;
+    bottom: -50%;
+    position: absolute;
+    margin-bottom:20px ;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.sec_team .boxs .box .team_content:hover .chef_details .cont-text{
+    bottom: 0;
+}
+
+.sec_team .boxs .box .team_content:hover .chef_details .cont-text .chef_social i{
+    margin: 15px;
+    color: var(--yellow-1);
+    transition: 0.5s;
+    font-size: 22px;
+}
+
+.sec_team .boxs .box .team_content:hover .chef_details .cont-text .chef_social i:hover{
+    transform: scale(1.2);
+    color: white;
+}
+
+
+
+/* ------------------------------------------------------------------------ */
+.footer {
+    padding: 20px;
+}
+
+.footer .footer_box{
+    background-color: var(--dark);
+    width: 100%;
+
+}
+
+
+.footer .container{
+    padding: 80px 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer .container .list{
+    width: 250px;
+}
+.footer .container .list h2{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+
+}
+
+.footer .container .list h4{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer .container .list a i{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    line-height: 40px;
+    margin-right:10px ;
+    transition: 0.5s;
+    font-size: 25px;
+    text-align: center;
+
+}
+
+.footer .container .list a i:hover{
+    background-color: #c59d5f;
+}
+
+footer .text p{
+    font-size: 14px;
+    line-height: 2;
+    color: #cccbcb;
+}
+.footer .news .inpt{
+    position: relative;
+    width: 240px;
+    margin: auto;
+}
+
+.footer .news .inpt input{
+    width: 100%;
+    background-color: black;
+    border: none;
+    outline: none;
+    border-right: 1px solid #1b1b1b;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 10px 5px;
+    color: #a5a5a5;
+}
+
+.footer .news .inpt i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 100%;
+    line-height: 35px;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.footer .news .inpt i:hover{
+    background-color: #c59d5f;
+}
+
+.footer .copy_right{
+    padding: 30px;
+    background-color: #1b1b1b;
+    text-align: center;
+}
+
+.footer .copy_right p{
+    margin-bottom: 15px;
+    color: #cccbcb;
+}
+.footer .copy_right p span{
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    margin-left: 5px;
+    font-family: var(--indie_flower);
+    font-weight: bolder;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* _______________________________________________________________ */
+
+
+/* media qurey  */
+
+@media(max-width:1030px){
+    .header nav{
+        width: 90%;
+    }
+    .header nav ul li{
+        margin:15px;
+
+    }
+    .header nav ul li a{
+        font-size: 12px;
+    }
+
+    .home .home_slider .slide .content h3{
+        font-size: 30px;
+    }
+    .home .home_slider .slide .content h1{
+        font-size: 50px;
+    }
+
+    .boxs .box{
+        flex-basis: 48%;
+        margin-bottom: 40px;
+        
+    }
+
+    /* .boxs .box:last-child{
+        margin: auto;
+    } */
+
+    .sec_team .boxs .box{
+        flex-basis: 40%;
+    }
+
+    .sec_team .boxs .box .team_content:hover .chef_details .cont-text .chef_social i{
+        font-size: 28px;
+    }
+
+    .footer .container .list{
+        margin-bottom: 20px;
+        width: 200px;
+
+    }
+    .footer .news .inpt{
+        width: 180px;
+    }
+
+    .reservation_div .reservation_form form input{
+        width: 45%;
+    }
+
+
+}
+
+@media(max-width:777px){
+    #openMenu,#resrv{
+        display: block;
+    }
+
+    .header nav .menu{
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        right: 0;
+        background-color: #444;
+        padding: 10px;
+        flex-wrap: wrap;
+        clip-path: polygon(0 0 ,100% 0,100% 0,0 0);
+        transition: 0.5s;
+    }
+    .header nav .menu.active{
+        clip-path: polygon(0 0 , 100% 0 , 100% 100% , 0 100%);
+    }
+    .header nav .menu ul {
+        width: 100%;
+    }
+    .header nav .menu ul li {
+        display: block;
+        padding: 0 20px;
+        margin: 10px;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        background-color: white;
+        margin: 10px auto;
+        border-radius: 5px;
+        
+        
+    }
+    .header nav ul li:hover,
+    .header nav ul li:first-child{
+        background-color: var(--yellow-1);
+        cursor: pointer;
+        transition: 0.5s; 
+    }
+
+    /* .header.active nav .menu ul li a{
+    color: white;
+    } */
+    .header nav .resrvationBtn ,.header .menu ul li::after {
+        display: none;
+    }
+
+    .home .home_slider .slide .content h3{
+        font-size: 25px;
+    }
+    .home .home_slider .slide .content h1{
+        font-size: 40px;
+    }
+
+    .home .home_slider .slide .content .main_btn{
+        font-size: 14px;
+        padding: 10px 20px;
+
+    }
+    .home .home_slider .btn_swip{
+        display: none;
+    }
+
+    .sec_header span{
+        font-size: 28px;
+    }
+    .sec_header h2{
+        font-size: 35px;
+    }
+
+    .about .content .div_p{
+        padding: 30px 0;
+    }
+
+    .about .content .div_p p{
+        font-size: 25px;
+    }
+
+    .about .content .boxs .box span{
+        font-size: 35px;
+    
+    }
+    
+    .about .content .boxs .box h3{
+        font-size: 25px;
+    }
+
+    .sec_menu .content ul li{
+        font-size: 18px;
+        margin: 0 15px;
+    }
+
+    .footer .container .list{
+        margin-bottom: 0 auto 30px;
+    }
+
+    .reservation_div .reservation_form form input{
+        width: 100%;
+    }
+
+    .reservation_div .reservation_form{
+        width: 80vw;
+        overflow: auto;
+        height: 70vh;
+        padding:25px 40px ;
+
+    }
+
+}
+
+@media(max-width:555px){
+    .home .home_slider .slide .content h3{
+        font-size: 18px;
+    }
+    .home .home_slider .slide .content h1{
+        font-size: 28px;
+    }
+
+    .home .home_slider .slide .content .main_btn{
+        font-size: 12px;
+        padding: 7px 15px;
+
+    }
+    .home .home_slider .btn_swip{
+        display: none;
+    }
+
+    .boxs{
+        justify-content: center;
+    }
+
+    .boxs .box{
+        flex-basis: 100%;
+    }
+
+    .sec_header span{
+        font-size: 25px;
+
+    }
+
+    .sec_header h2{
+        font-size: 30px;
+    }
+
+    .sec_team .boxs .box{
+        flex-basis: 80%;
+    }
+
+    .sec_team .boxs .box .team_content:hover .chef_details .cont-text .chef_social i{
+        font-size: 30px;
+    }
+}
+
+@media(max-width:850px){
+    .line_height{
+        display: none;
+    }
+}
+
